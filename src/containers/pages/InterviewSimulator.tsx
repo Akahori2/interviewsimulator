@@ -1,21 +1,23 @@
 import React from "react"
 import Header from "containers/organisms/Header"
-import InterviewPanel from "containers/organisms/InterviewPanel"
+import CenterPanel from "containers/organisms/CenterPanel"
 import BottomNavigation from "containers/organisms/BottomNavigation"
 import { makeStyles } from "@material-ui/core/styles"
 import CssBaseline from "@material-ui/core/CssBaseline"
+import store from "store/"
+import { Provider } from "react-redux"
 
-const bottomNavigationHeight = "56px"
-const appBarHeight = "64px"
+const BOTTOM_NAVIGATION_HEIGHT = "56px"
+const APP_BAR_HEIGHT = "64px"
 
 const useStyles = makeStyles(() => ({
   root: {
     display: "grid",
-    gridTemplateRows: `${appBarHeight} auto ${bottomNavigationHeight}`,
+    gridTemplateRows: `${APP_BAR_HEIGHT} auto ${BOTTOM_NAVIGATION_HEIGHT}`,
     height: "100vh"
   },
 
-  body: {
+  center: {
     overflow: "auto"
   }
 }))
@@ -24,18 +26,20 @@ const InterviewSimulator = () => {
   const classes = useStyles()
 
   return (
-    <div className={classes.root}>
-      <CssBaseline />
-      <header>
-        <Header />
-      </header>
-      <body className={classes.body}>
-        <InterviewPanel />
-      </body>
-      <div>
-        <BottomNavigation />
+    <Provider store={store}>
+      <div className={classes.root}>
+        <CssBaseline />
+        <header>
+          <Header />
+        </header>
+        <main className={classes.center}>
+          <CenterPanel />
+        </main>
+        <div>
+          <BottomNavigation />
+        </div>
       </div>
-    </div>
+    </Provider>
   )
 }
 

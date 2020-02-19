@@ -1,0 +1,2 @@
+export const INTERVIEW_PANEL = "INTERVIEW_PANEL"
+export const EDIT_PANEL = "EDIT_PANEL"
