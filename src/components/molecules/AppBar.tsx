@@ -10,15 +10,23 @@ import Title from "components/atoms/Title"
 const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1
+  },
+
+  bar: {
+    boxShadow: "none"
   }
 }))
 
-function AppBar() {
+type AppBarProps = {
+  children?: never
+}
+
+const AppBar: React.FC<AppBarProps> = () => {
   const classes = useStyles()
 
   return (
     <div className={classes.root}>
-      <MuiAppBar position="static">
+      <MuiAppBar position="static" className={classes.bar}>
         <Toolbar>
           <Title>面接シミュレーター</Title>
           <HeaderIcon>

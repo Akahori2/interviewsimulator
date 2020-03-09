@@ -1,7 +1,12 @@
 import React from "react"
+import EditListCard from "components/molecules/EditListCard"
 
 const EditPanel = () => {
-  return <div>編集パネル</div>
+  return (
+    <>
+      <EditListCard />
+    </>
+  )
 }
 
 export default EditPanel

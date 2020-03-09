@@ -1,0 +1,3 @@
+export const INTERVIEW_START_BUTTON_SIZE = 200
+export const BOTTOM_NAVIGATION_HEIGHT = 56
+export const APP_BAR_HEIGHT = 64

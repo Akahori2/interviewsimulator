@@ -6,14 +6,12 @@ import { makeStyles } from "@material-ui/core/styles"
 import CssBaseline from "@material-ui/core/CssBaseline"
 import store from "store/"
 import { Provider } from "react-redux"
-
-const BOTTOM_NAVIGATION_HEIGHT = "56px"
-const APP_BAR_HEIGHT = "64px"
+import { BOTTOM_NAVIGATION_HEIGHT, APP_BAR_HEIGHT } from "utils/partsSize"
 
 const useStyles = makeStyles(() => ({
   root: {
     display: "grid",
-    gridTemplateRows: `${APP_BAR_HEIGHT} auto ${BOTTOM_NAVIGATION_HEIGHT}`,
+    gridTemplateRows: `${`${APP_BAR_HEIGHT}px`} auto ${`${BOTTOM_NAVIGATION_HEIGHT}px`}`,
     height: "100vh"
   },
 

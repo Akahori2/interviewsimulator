@@ -80,8 +80,9 @@ module.exports = {
     indent: 'off',
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/prefer-interface': 'off',
+    '@typescript-eslint/camelcase': 'off',
 
     // airbnb
     'no-restricted-syntax': [
@@ -159,6 +160,7 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
+    'import/no-absolute-path': 'off',
   },
   settings: {
     'import/parsers': {
